@@ -475,5 +475,3 @@ const typeMap: any = {
   ReleaseDatePrecision: ['day'],
   TrackType: ['track'],
 };
-
-export function downloadAll(uid: string) {}
