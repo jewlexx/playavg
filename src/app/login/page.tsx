@@ -2,16 +2,15 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
-import { useRouter, useParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { setSpotifyKey } from '@/spot/key';
 
 export default function Login() {
-  const router = useRouter();
-  const { code } = useParams();
+  const params = useParams();
 
   useEffect(() => {
-    setSpotifyKey({ key: code });
-  }, [router, code]);
+    setSpotifyKey({ key: params.code });
+  }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
